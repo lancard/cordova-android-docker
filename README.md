@@ -1,3 +1,5 @@
+![Docker Image Size (tag)](https://img.shields.io/docker/image-size/lancard/android/latest)
+
 # cordova-android
 안드로이드용 코도바 Dockerfile (to dockerhub)
 
