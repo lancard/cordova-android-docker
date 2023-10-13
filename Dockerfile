@@ -17,14 +17,14 @@ RUN wget -q https://dl.google.com/android/repository/commandlinetools-linux-8512
 RUN unzip cmdlinetools.zip
 RUN rm cmdlinetools.zip
 
-RUN wget -q https://services.gradle.org/distributions/gradle-7.6-bin.zip -nc
-RUN unzip gradle-7.6-bin.zip
-RUN rm gradle-7.6-bin.zip
+RUN wget -q https://services.gradle.org/distributions/gradle-7.6.3-bin.zip -nc
+RUN unzip gradle-7.6.3-bin.zip
+RUN rm gradle-7.6.3-bin.zip
 
 ENV ANDROID_HOME=/cmdline-tools/
 ENV ANDROID_SDK_ROOT=/cmdline-tools/
-ENV PATH="${PATH}:/gradle-7.6/bin:/cmdline-tools/bin"
-RUN yes | sdkmanager --sdk_root=${ANDROID_SDK_ROOT} --install "cmdline-tools;8.0"
-RUN yes | sdkmanager --sdk_root=${ANDROID_SDK_ROOT} "platform-tools" "build-tools;32.0.0"
+ENV PATH="${PATH}:/gradle-7.6.3/bin:/cmdline-tools/bin"
+RUN yes | sdkmanager --sdk_root=${ANDROID_SDK_ROOT} --install "cmdline-tools;latest"
+RUN yes | sdkmanager --sdk_root=${ANDROID_SDK_ROOT} "platform-tools" "build-tools;34.0.0"
 
 ENTRYPOINT ["/app/run.sh"]
