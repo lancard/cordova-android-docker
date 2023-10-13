@@ -25,6 +25,6 @@ ENV ANDROID_HOME=/cmdline-tools/
 ENV ANDROID_SDK_ROOT=/cmdline-tools/
 ENV PATH="${PATH}:/gradle-7.6.3/bin:/cmdline-tools/bin"
 RUN yes | sdkmanager --sdk_root=${ANDROID_SDK_ROOT} --install "cmdline-tools;latest"
-RUN yes | sdkmanager --sdk_root=${ANDROID_SDK_ROOT} "platform-tools" "build-tools;34.0.0"
+RUN yes | sdkmanager --sdk_root=${ANDROID_SDK_ROOT} "platform-tools" "build-tools;33.0.2"
 
 ENTRYPOINT ["/app/run.sh"]
