@@ -13,7 +13,7 @@ RUN npm -v
 
 RUN npm install -g cordova
 
-RUN wget -q https://dl.google.com/android/repository/commandlinetools-linux-8512546_latest.zip?hl=ko -O cmdlinetools.zip -nc
+RUN wget -q https://dl.google.com/android/repository/commandlinetools-linux-11076708_latest.zip?hl=ko -O cmdlinetools.zip -nc
 RUN unzip cmdlinetools.zip
 RUN rm cmdlinetools.zip
 
