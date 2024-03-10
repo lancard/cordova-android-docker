@@ -2,7 +2,7 @@ FROM ubuntu:22.04
 
 RUN apt-get update
 RUN apt-get upgrade -y
-RUN apt-get install npm openjdk-11-jdk wget unzip curl vim net-tools -y
+RUN apt-get install npm openjdk-17-jdk wget unzip curl vim net-tools -y
 
 RUN npm install -g n
 RUN n lts
