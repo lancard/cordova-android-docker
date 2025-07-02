@@ -25,6 +25,6 @@ ENV ANDROID_HOME=/cmdline-tools/
 ENV ANDROID_SDK_ROOT=/cmdline-tools/
 ENV PATH="${PATH}:/gradle-8.14.2/bin:/cmdline-tools/bin"
 RUN yes | sdkmanager --sdk_root=${ANDROID_SDK_ROOT} --install "cmdline-tools;19.0"
-RUN yes | sdkmanager --sdk_root=${ANDROID_SDK_ROOT} "platform-tools" "build-tools;35.0.2"
+RUN yes | sdkmanager --sdk_root=${ANDROID_SDK_ROOT} "platform-tools" "build-tools;35.0.1"
 
 CMD ["tail", "-f", "/dev/null"]
